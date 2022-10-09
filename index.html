@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primis Trading</title>
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Primis Trading</title>
 
+      <!-- Vendor CSS Files -->
+      <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+      <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+         rel="stylesheet"
+      />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,9 +51,9 @@
             <div class="vh-100" style="background-image: url('assets/img/background.jpg'); background-size: cover;" >
                 <!-- <h1 style="color: white;"> Primis Trading </h1> -->
             </div>
-        </div> 
+         </div>
 
-        <div class="section">
+         <div class="section">
             <div class="row h-100 no-gutters">
                 <div class="col-md-6 no-gutters" style="background:url('assets/img/who_we_are.jpg'); background-size:cover; background-repeat: no-repeat;">
                     <div class="position-absolute top-0 left-0 w-100 h-100 d-md-none" style="background-color: rgba(0, 0, 0, 0.264);">
@@ -97,9 +104,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+         </div>
 
-        <div class="section">
+         <div class="section">
             <div class="row h-100 no-gutters">
                 <div class="col-md-6 no-gutters" style="background:url('assets/img/our_products_2.jpg');background-position: center center; background-size: cover; background-repeat: no-repeat;">
                 </div>
@@ -114,7 +121,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+         </div>
 
         <div class="section">
                 <div class="row h-100 no-gutters">
@@ -134,24 +141,24 @@
                 </div>
         </div>
 
-    </div>
+      <!-- Vendor JS Files -->
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- <script src="assets/vendor/aos/aos.js"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.min.js"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.min.js"></script>
-
-    <script>
-        new fullpage('#fullPage', {
-            autoScrolling: true
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-                AOS.init();
-                console.log('aos initialized')
-        });
-    </script>
-
-</body>
+      <script>
+         document.addEventListener("DOMContentLoaded", () => {
+            AOS.init();
+            new fullpage("#fullPage", {
+               autoScrolling: true,
+               afterLoad: function () {
+                  document.querySelectorAll(".fp-table.active .aos-init").forEach((el) => {
+                     el.classList.add("aos-animate");
+                  });
+               },
+            });
+         });
+      </script>
+   </body>
 </html>
